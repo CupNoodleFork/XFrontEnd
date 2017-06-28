@@ -1,5 +1,5 @@
 {
-  "name": "WbgFrontEnd",
+  "name": "XFrontEnd",
   "version": "0.1.0",
   "main": "./dist/electron/main.js",
   "author": "zhangchaowei <zhangchaowei@haizhi.com>",
@@ -17,7 +17,7 @@
     "postinstall": ""
   },
   "build": {
-    "productName": "WbgFrontEnd",
+    "productName": "XFrontEnd",
     "appId": "org.simulatedgreg.electron-vue",
     "directories": {
       "output": "build"

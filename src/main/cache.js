@@ -13,6 +13,7 @@ import defaultConfig from './defaultConfig.json'
 let _isCacheDirectoryExist = undefined;
 let _cacheHome = '';
 const VERSION = require('../../package.json').version;
+const PROJECT_NAME = require('../../package.json').name;
 let USERNAME = 'customer';
 const userConfig = {};
 let configPromise = null;
@@ -60,14 +61,12 @@ function _makeCacheDirectoryTree(tree) {
             _makeCacheDirectoryTree(dir.children);
         }
     });
-
-    _writeSystemVersion();
 }
 
 function detectCacheDirectory() {
     return new Promise((resolve, reject) => {
         if (process.platform === 'darwin') {
-            const directoryPath = path.resolve(process.env.HOME, 'Library', 'Application Support', 'WbgFrontEnd');
+            const directoryPath = path.resolve(process.env.HOME, 'Library', 'Application Support', PROJECT_NAME);
             if (cacheDirectoryExist(directoryPath)) {
                 console.log('Find cache directory duccess');
                 _cacheHome = directoryPath;
@@ -84,6 +83,7 @@ function detectCacheDirectory() {
                     _cacheHome = directoryPath;
                     console.log('Make cache directory tree ...');
                     _makeCacheDirectoryTree(_cacheTree);
+                    _writeSystemVersion();
                     resolve();
                 })
             }
