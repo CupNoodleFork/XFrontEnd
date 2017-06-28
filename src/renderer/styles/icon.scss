@@ -1,0 +1,27 @@
+%app-icon {
+    width: 56px;
+    height: 56px;
+    background-size: 48px 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.webstorm-icon {
+    background-image: url("icons/webstorm.png");
+    @extend %app-icon;
+}
+
+.vscode-icon {
+    background-image: url("icons/vscode.png");
+    @extend %app-icon;
+}
+
+.sublime-icon {
+    background-image: url("icons/sublime.png");
+    @extend %app-icon;
+}
+
+.xcode-icon {
+    background-image: url("icons/xcode.png");
+    @extend %app-icon;
+}

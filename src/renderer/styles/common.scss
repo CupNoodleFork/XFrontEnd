@@ -1,0 +1,42 @@
+.page-root {
+    height: 100vh;
+}
+.page {
+    height: 100%;
+}
+.sub-page {
+    height: calc(100% - 75px);
+}
+body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto,Noto Sans,Noto,sans-serif;
+}
+.draggable {
+    -webkit-user-select: none;
+    user-select: none;
+
+    -webkit-app-region: drag;
+}
+.none-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.sub-toolbar-shadow {
+    box-shadow: 0 3px 3px rgba(0,0,0,.2), 0 1px 1px rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+.sub-toolbar {
+    z-index: 3;
+    box-shadow: 0 3px 3px rgba(0,0,0,.2), 0 1px 1px rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+.sub-toolbar .md-title:first-child {
+    margin-left: 56px;
+}
+.sub-toolbar .md-fab {
+    margin: 0;
+    position: absolute;
+    bottom: -20px;
+    left: 16px;
+}
